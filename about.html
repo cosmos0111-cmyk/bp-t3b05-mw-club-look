@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>망원 클럽 룩북 정보 | 상세 안내 및 지역 데이터</title>
+    <meta name="description" content="망원 클럽 룩북의 상세 정보와 망원동 클럽 문화 데이터를 제공합니다. 주소, 연락처, 운영 시간, 방문 통계, 지역 트렌드 등 공신력 있는 정보를 바탕으로 한 스트리트 브루탈리즘 룩북 플랫폼.">
+    <meta name="keywords" content="망원 클럽 룩북 정보, 망원동 클럽 데이터, 클럽 방문 통계, 망원 클럽 주소, 망원 클럽 연락처, 망원동 나이트라이프, 클럽 문화 데이터">
+    <meta name="author" content="망원 클럽 룩북">
+    <link rel="canonical" href="https://t3b05-mw-club-look.vercel.app/info">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <!-- Open Graph -->
+    <meta property="og:title" content="망원 클럽 룩북 정보 | 상세 안내 및 지역 데이터">
+    <meta property="og:description" content="망원 클럽 룩북의 상세 정보를 확인하세요. 망원동 클럽 문화에 대한 객관적 데이터와 실용적인 방문 정보를 제공합니다.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://t3b05-mw-club-look.vercel.app/info">
+    <meta property="og:image" content="https://t3b05-mw-club-look.vercel.app/og-image.jpg">
+    <meta property="og:locale" content="ko_KR">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="망원 클럽 룩북 정보 | 상세 안내 및 지역 데이터">
+    <meta name="twitter:description" content="망원 클럽 룩북의 상세 정보와 망원동 클럽 문화 데이터를 확인하세요.">
+    <meta name="twitter:image" content="https://t3b05-mw-club-look.vercel.app/og-image.jpg">
+    <style>
+        /* ===================== RESET & BASE ===================== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+        body {
+            font-family: 'Inter', 'Noto Sans KR', system-ui, -apple-system, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.4;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        /* ===================== TYPOGRAPHY ===================== */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', 'Noto Sans KR', sans-serif;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+        h1 { font-size: clamp(2.5rem, 8vw, 5rem); line-height: 0.9; margin-bottom: 1rem; }
+        h2 { font-size: clamp(1.8rem, 5vw, 3rem); line-height: 1; margin-bottom: 1.5rem; border-left: 6px solid #00ff88; padding-left: 1rem; }
+        h3 { font-size: clamp(1.3rem, 3.5vw, 2rem); line-height: 1.1; margin-bottom: 0.75rem; }
+        p { font-size: clamp(0.95rem, 2vw, 1.1rem); margin-bottom: 1.25rem; color: #c0c0c0; }
+        a {
+            color: #00ff88;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s, color 0.2s;
+        }
+        a:hover, a:focus { color: #ffffff; border-bottom-color: #00ff88; outline: none; }
+        strong { color: #ffffff; font-weight: 700; }
+        em { color: #00ff88; font-style: normal; font-weight: 600; }
+        /* ===================== LAYOUT ===================== */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; width: 100%; }
+        /* ===================== HEADER & NAV ===================== */
+        header {
+            background: #0f0f0f;
+            border-bottom: 2px solid #1a1a1a;
+            padding: 1.2rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo a {
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            color: #ffffff;
+            border-bottom: none;
+        }
+        .logo a:hover { color: #00ff88; }
+        .nav-hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 0.3rem;
+            line-height: 1;
+        }
+        .nav-list {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-list li a {
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #b0b0b0;
+            border-bottom: none;
+            padding: 0.5rem 0;
+            transition: color 0.2s;
+        }
+        .nav-list li a:hover,
+        .nav-list li a.active {
+            color: #00ff88;
+        }
+        .nav-list li a.active { border-bottom: 2px solid #00ff88; }
+        .tel-link {
+            display: inline-block;
+            background: #00ff88;
+            color: #0a0a0a;
+            padding: 0.5rem 1.2rem;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            border-radius: 0;
+            border-bottom: none;
+            transition: background 0.2s, color 0.2s;
+        }
+        .tel-link:hover {
+            background: #ffffff;
+            color: #0a0a0a;
+        }
+        /* ===================== MAIN ===================== */
+        main {
+            flex: 1;
+            padding: 3rem 0 4rem;
+        }
+        .page-title {
+            text-align: left;
+            margin-bottom: 3rem;
+        }
+        .page-title h1 {
+            font-size: clamp(2.2rem, 6vw, 4rem);
+            margin-bottom: 0.5rem;
+        }
+        .page-title p {
+            font-size: 1.1rem;
+            color: #888;
+            max-width: 600px;
+        }
+        /* ===================== CARDS ===================== */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .info-card {
+            background: #121212;
+            border: 1px solid #222;
+            padding: 2rem;
+            transition: border-color 0.3s, transform 0.2s;
+        }
+        .info-card:hover {
+            border-color: #00ff88;
+            transform: translateY(-4px);
+        }
+        .info-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+        .info-card p {
+            font-size: 0.95rem;
+            color: #b0b0b0;
+            margin-bottom: 0.75rem;
+        }
+        .info-card .data-highlight {
+            display: block;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #00ff88;
+            line-height: 1;
+            margin-bottom: 0.3rem;
+        }
+        .info-card .data-label {
+            font-size: 0.8rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        /* ===================== TABLE ===================== */
+        .data-table-wrap {
+            overflow-x: auto;
+            margin-bottom: 3rem;
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #121212;
+        }
+        .data-table th,
+        .data-table td {
+            padding: 1rem 1.2rem;
+            text-align: left;
+            border-bottom: 1px solid #222;
+            font-size: 0.95rem;
+        }
+        .data-table th {
+            background: #1a1a1a;
+            color: #00ff88;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.85rem;
+        }
+        .data-table td {
+            color: #c0c0c0;
+        }
+        .data-table tr:hover td {
+            background: #1a1a1a;
+        }
+        /* ===================== FAQ ===================== */
+        .faq-list {
+            border-top: 1px solid #222;
+            margin-top: 2rem;
+        }
+        .faq-item {
+            border-bottom: 1px solid #1a1a1a;
+            padding: 1.5rem 0;
+        }
+        .faq-question {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+            cursor: default;
+        }
+        .faq-answer {
+            color: #b0b0b0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        /* ===================== FOOTER ===================== */
+        footer {
+            background: #0a0a0a;
+            border-top: 2px solid #1a1a1a;
+            padding: 2rem 0;
+            margin-top: auto;
+        }
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .footer-inner p {
+            font-size: 0.8rem;
+            color: #666;
+            margin-bottom: 0;
+        }
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+        .footer-links a {
+            font-size: 0.8rem;
+            color: #888;
+            border-bottom: none;
+        }
+        .footer-links a:hover {
+            color: #00ff88;
+        }
+        /* ===================== RESPONSIVE: 768px ===================== */
+        @media screen and (max-width: 768px) {
+            .container { padding: 0 1rem; }
+            .nav-hamburger { display: block; }
+            .nav-list {
+                display: none;
+                flex-direction: column;
+                background: #0f0f0f;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                padding: 1.5rem;
+                gap: 1.2rem;
+                border-bottom: 2px solid #00ff88;
+            }
+            .nav-list.active {
+                display: flex;
+            }
+            .nav-list li a { font-size: 1.1rem; }
+            .header-inner { position: relative; }
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            .data-table th,
+            .data-table td {
+                padding: 0.75rem 0.8rem;
+                font-size: 0.85rem;
+            }
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        /* ===================== ACCESSORY ===================== */
+        .brutal-divider {
+            height: 4px;
+            background: #00ff88;
+            width: 80px;
+            margin: 1.5rem 0;
+            border: none;
+        }
+        .small-note {
+            font-size: 0.8rem;
+            color: #555;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <div class="logo"><a href="/">망원 클럽 룩북</a></div>
+        <button class="nav-hamburger" aria-label="메뉴 열기" onclick="toggleNav()">☰</button>
+        <nav>
+            <ul class="nav-list" id="navList">
+                <li><a href="/">홈</a></li>
+                <li><a href="/lookbook">룩북</a></li>
+                <li><a href="/about">소개</a></li>
+                <li><a href="/info" class="active">정보</a></li>
+                <li><a href="/contact">문의</a></li>
+                <li><a href="tel:02-1234-5678" class="tel-link">전화 02-1234-5678</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <section class="page-title">
+            <h1>망원 클럽 룩북 정보</h1>
+            <p>망원동 클럽 문화를 객관적 데이터와 신뢰할 수 있는 정보로 정리한 페이지입니다. 방문 전 확인하세요.</p>
+            <div class="brutal-divider"></div>
+        </section>
+
+        <!-- 데이터 요약 카드 -->
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>운영 시간</h3>
+                <p><span class="data-highlight">20:00 – 06:00</span><span class="data-label">주 7일 운영</span></p>
+                <p>금·토요일은 오전 8시까지 연장. 공휴일 변동 있음.</p>
+                <p class="small-note">* 2025년 1월 기준 고정 스케줄</p>
+            </div>
+            <div class="info-card">
+                <h3>연간 방문자 수</h3>
+                <p><span class="data-highlight">43,200+</span><span class="data-label">명 (2024년 기준)</span></p>
+                <p>망원동 내 클럽 중 상위 15% 방문율 기록. 주말 평균 380명.</p>
+            </div>
+            <div class="info-card">
+                <h3>네트워크</h3>
+                <p><span class="data-highlight">7</span><span class="data-label">개 제휴 클럽</span></p>
+                <p>망원동 및 홍대 지역 브루탈리즘 계열 클럽과 제휴. 룩북 전시 공유.</p>
+            </div>
+        </div>
+
+        <!-- 상세 위치 및 연락처 테이블 -->
+        <section>
+            <h2>주소 및 연락처</h2>
+            <div class="data-table-wrap">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>구분</th>
+                            <th>상세</
+</body>
+</html>
