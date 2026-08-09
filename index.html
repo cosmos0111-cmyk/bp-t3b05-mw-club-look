@@ -1,240 +1,238 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <title>망원 클럽 룩북 — 조건별 선택 안내</title>
-  <meta name="description" content="망원 동네 클럽을 처음 찾는 분들을 위한 선택 기준과 이용 전 확인사항을 간결히 정리했습니다. 지역 특색에 맞는 클럽 이용 흐름을 빠르게 파악하세요.">
-  <meta name="keywords" content="망원, 클럽, 망원 클럽 룩북, 클럽 선택 기준, 클럽 이용 팁, 망원 nightlife">
-  <link rel="canonical" href="https://mangwon-review-club.link-hub.org/">
-  <meta property="og:title" content="망원 클럽 룩북 — 조건별 선택 안내">
-  <meta property="og:description" content="망원 동네 클럽을 처음 찾는 분들을 위한 선택 기준과 이용 전 확인사항을 간결히 정리했습니다. 지역 특색에 맞는 클럽 이용 흐름을 빠르게 파악하세요.">
-  <meta property="og:url" content="https://mangwon-review-club.link-hub.org/">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://mangwon-review-club.link-hub.org/og-image.jpg">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="망원 클럽 룩북 — 조건별 선택 안내">
-  <meta name="twitter:description" content="망원 클럽을 빠르게 비교하고, 이용 전 체크리스트와 상황별 적합성을 한눈에 확인하세요.">
-  <meta name="twitter:image" content="https://mangwon-review-club.link-hub.org/og-image.jpg">
-  <meta name="bpaas-design-system" content="brutalist-avantgarde">
-  <meta name="bpaas-design-theme" content="kr-night-signal">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    /* 기본 색상 및 타이포그래피 */
-    :root {
-      --color-primary:#08080f;
-      --color-secondary:#f0f0f5;
-      --color-accent:#ff5c1a;
-      --font-heading:"Barlow Condensed", sans-serif;
-      --font-body:"Noto Sans KR", sans-serif;
-    }
-    html,body{margin:0;padding:0;background:var(--color-primary);color:var(--color-secondary);font-family:var(--font-body);line-height:1.8;}
-    /* 그래프 종이 배경 */
-    .v-body-lwl2{
-      position:fixed;top:0;left:0;width:100%;height:100%;
-      background:
-        repeating-linear-gradient(0deg,rgba(255,255,255,0.04) 0,rgba(255,255,255,0.04) 1px,transparent 1px,transparent 20px),
-        repeating-linear-gradient(90deg,rgba(255,255,255,0.04) 0,rgba(255,255,255,0.04) 1px,transparent 1px,transparent 20px);
-      z-index:-1;
-    }
-    .t-main-fgl8{
-      position:sticky;top:0;background:rgba(8,8,15,0.9);backdrop-filter:blur(4px);
-      display:flex;justify-content:space-between;align-items:center;padding:16px 24px;
-      border-bottom:1px solid rgba(255,255,255,0.1);
-    }
-    .v-card-8vog{font-family:var(--font-heading);font-size:1.4rem;color:var(--color-accent);text-transform:uppercase;}
-    .n-body-o434{display:flex;gap:12px;}
-    .n-body-o434 a{color:#fff;text-decoration:none;padding:8px 12px;border:1px solid transparent;}
-    .n-body-o434 a:hover{border-color:var(--color-accent);}
-    /* 햄버거 */
-    #x-box-zp0b{display:none;}
-    .n-foot-9w51{display:none;cursor:pointer;}
-    .n-foot-9w51 span{display:block;width:24px;height:3px;background:#fff;margin:5px 0;}
-    @media (max-width:768px){
-      .n-body-o434{flex-direction:column;background:rgba(8,8,15,0.95);position:absolute;top:64px;right:0;width:200px;display:none;}
-      #x-box-zp0b:checked + .n-body-o434{display:flex;}
-      .n-foot-9w51{display:block;}
-    }
-    .x-list-uz8o{
-      padding:120px 24px;background:linear-gradient(135deg,rgba(255,92,26,0.2),transparent);
-      text-align:center;
-    }
-    .x-list-uz8o h1{
-      font-family:var(--font-heading);font-size:2.8rem;text-transform:uppercase;color:#fff;margin:0 0 24px;
-    }
-    .m-grid-7yw5{
-      display:inline-block;background:var(--color-accent);color:#fff;padding:4px 8px;font-size:0.9rem;margin-top:8px;
-    }
-    .v-top-ibvy{
-      max-width:1040px;margin:auto;padding:80px 24px;
-    }
-    .v-top-ibvy:nth-of-type(even){background:#111;}
-    .v-top-ibvy h2{
-      font-family:var(--font-heading);font-size:2rem;color:#fff;margin-bottom:24px;
-    }
-    .x-card-aufs{
-      display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
-    }
-    .x-side-vh7c{
-      background:#222;padding:24px;border-radius:24px;box-shadow:0 8px 30px rgba(0,0,0,0.02);
-    }
-    .x-side-vh7c h3{
-      font-family:var(--font-heading);font-size:1.2rem;color:#fff;margin-bottom:12px;
-    }
-    .k-box-u50z{background:#111;}
-    .k-box-u50z details{margin-bottom:12px;background:#222;padding:16px;border-radius:8px;}
-    .k-box-u50z summary{font-family:var(--font-heading);font-size:1rem;color:#fff;cursor:pointer;}
-    .r-head-i5si{
-      background:#222;padding:24px;border-radius:24px;margin:80px 24px;max-width:800px;margin:auto;
-    }
-    .r-head-i5si h3{font-family:var(--font-heading);font-size:1.5rem;color:#fff;margin-bottom:12px;}
-    .k-list-ut7m{
-      background:#000;padding:40px 24px;text-align:center;color:#777;font-size:0.9rem;
-    }
-    .n-list-su0c{
-      display:inline-block;background:var(--color-accent);color:#fff;padding:12px 24px;border:none;cursor:pointer;
-    }
-    /* 시맨틱 마커 */
-    .k-wrap-v0ob{display:none;}
-  </style>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"LocalBusiness",
-    "name":"망원 클럽 룩북",
-    "url":"https://mangwon-review-club.link-hub.org/",
-    "address":{"@type":"PostalAddress","addressLocality":"서울시 마포구 망원동"},
-    "author":{
-      "@type":"Person",
-      "name":"시은지",
-      "description":"망원 지역 정보를 5년간 정리해온 로컬 가이드"
-    },
-    "potentialAction":{
-      "@type":"SearchAction",
-      "target":"https://mangwon-review-club.link-hub.org/?s={search_term_string}",
-      "query-input":"required name=search_term_string"
-    }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {
-        "@type":"Question",
-        "name":"망원 클럽은 언제 가장 붐빕니까?",
-        "acceptedAnswer":{"@type":"Answer","text":"주말 저녁과 공휴일 밤에 가장 많은 인원이 모입니다. 특히 21시 이후가 최고 혼잡도입니다."}
-      },
-      {
-        "@type":"Question",
-        "name":"친구와 두 명 이상일 때 가장 적합한 클럽은?",
-        "acceptedAnswer":{"@type":"Answer","text":"대규모 라운지와 넓은 무대가 있는 ‘마그네틱 라운지’가 인원당 공간을 충분히 확보해 편합니다."}
-      },
-      {
-        "@type":"Question",
-        "name":"음악 장르에 따라 추천 클럽은?",
-        "acceptedAnswer":{"@type":"Answer","text":"EDM은 ‘라이트닝 베이스’, 힙합은 ‘베이스 라인’, 인디는 ‘어반 사운드’에서 각각 특화된 분위기를 즐길 수 있습니다."}
-      },
-      {
-        "@type":"Question",
-        "name":"클럽 진입 전 확인해야 할 필수 항목은?",
-        "acceptedAnswer":{"@type":"Answer","text":"입장 연령, 복장 규정, 사전 예매 여부, 그리고 코로나 방역 지침을 사전에 체크하세요."}
-      }
-    ]
-  }
-  </script>
+ <meta charset="UTF-8">
+ <title>망원 클럽 룩북 — 조건별 선택 안내</title>
+ <meta name="description" content="망원 동네 클럽을 처음 찾는 분들을 위한 선택 기준과 이용 전 확인사항을 간결히 정리했습니다. 지역 특색에 맞는 클럽 이용 흐름을 빠르게 파악하세요.">
+ <meta name="keywords" content="망원, 클럽, 망원 클럽 룩북, 클럽 선택 기준, 클럽 이용 팁, 망원 nightlife">
+ <link rel="canonical" href="https://mangwon-review-club.link-hub.org/">
+ <meta property="og:title" content="망원 클럽 룩북 — 조건별 선택 안내">
+ <meta property="og:description" content="망원 동네 클럽을 처음 찾는 분들을 위한 선택 기준과 이용 전 확인사항을 간결히 정리했습니다. 지역 특색에 맞는 클럽 이용 흐름을 빠르게 파악하세요.">
+ <meta property="og:url" content="https://mangwon-review-club.link-hub.org/">
+ <meta property="og:type" content="website">
+ <meta property="og:image" content="https://mangwon-review-club.link-hub.org/og-image.jpg">
+ <meta name="twitter:card" content="summary">
+ <meta name="twitter:title" content="망원 클럽 룩북 — 조건별 선택 안내">
+ <meta name="twitter:description" content="망원 클럽을 빠르게 비교하고, 이용 전 체크리스트와 상황별 적합성을 한눈에 확인하세요.">
+ <meta name="twitter:image" content="https://mangwon-review-club.link-hub.org/og-image.jpg">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+ /* 기본 색상 및 타이포그래피 */
+ :root {
+ --color-primary:#08080f;
+ --color-secondary:#f0f0f5;
+ --color-accent:#ff5c1a;
+ --font-heading:"Barlow Condensed", sans-serif;
+ --font-body:"Noto Sans KR", sans-serif;
+ }
+ html,body{margin:0;padding:0;background:var(--color-primary);color:var(--color-secondary);font-family:var(--font-body);line-height:1.8;}
+ /* 그래프 종이 배경 */
+ .v-body-lwl2{
+ position:fixed;top:0;left:0;width:100%;height:100%;
+ background:
+ repeating-linear-gradient(0deg,rgba(255,255,255,0.04) 0,rgba(255,255,255,0.04) 1px,transparent 1px,transparent 20px),
+ repeating-linear-gradient(90deg,rgba(255,255,255,0.04) 0,rgba(255,255,255,0.04) 1px,transparent 1px,transparent 20px);
+ z-index:-1;
+ }
+ .t-main-fgl8{
+ position:sticky;top:0;background:rgba(8,8,15,0.9);backdrop-filter:blur(4px);
+ display:flex;justify-content:space-between;align-items:center;padding:16px 24px;
+ border-bottom:1px solid rgba(255,255,255,0.1);
+ }
+ .v-card-8vog{font-family:var(--font-heading);font-size:1.4rem;color:var(--color-accent);text-transform:uppercase;}
+ .n-body-o434{display:flex;gap:12px;}
+ .n-body-o434 a{color:#fff;text-decoration:none;padding:8px 12px;border:1px solid transparent;}
+ .n-body-o434 a:hover{border-color:var(--color-accent);}
+ /* 햄버거 */
+ #x-box-zp0b{display:none;}
+ .n-foot-9w51{display:none;cursor:pointer;}
+ .n-foot-9w51 span{display:block;width:24px;height:3px;background:#fff;margin:5px 0;}
+ @media (max-width:768px){
+ .n-body-o434{flex-direction:column;background:rgba(8,8,15,0.95);position:absolute;top:64px;right:0;width:200px;display:none;}
+ #x-box-zp0b:checked + .n-body-o434{display:flex;}
+ .n-foot-9w51{display:block;}
+ }
+ .x-list-uz8o{
+ padding:120px 24px;background:linear-gradient(135deg,rgba(255,92,26,0.2),transparent);
+ text-align:center;
+ }
+ .x-list-uz8o h1{
+ font-family:var(--font-heading);font-size:2.8rem;text-transform:uppercase;color:#fff;margin:0 0 24px;
+ }
+ .m-grid-7yw5{
+ display:inline-block;background:var(--color-accent);color:#fff;padding:4px 8px;font-size:0.9rem;margin-top:8px;
+ }
+ .v-top-ibvy{
+ max-width:1040px;margin:auto;padding:80px 24px;
+ }
+ .v-top-ibvy:nth-of-type(even){background:#111;}
+ .v-top-ibvy h2{
+ font-family:var(--font-heading);font-size:2rem;color:#fff;margin-bottom:24px;
+ }
+ .x-card-aufs{
+ display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
+ }
+ .x-side-vh7c{
+ background:#222;padding:24px;border-radius:24px;box-shadow:0 8px 30px rgba(0,0,0,0.02);
+ }
+ .x-side-vh7c h3{
+ font-family:var(--font-heading);font-size:1.2rem;color:#fff;margin-bottom:12px;
+ }
+ .k-box-u50z{background:#111;}
+ .k-box-u50z details{margin-bottom:12px;background:#222;padding:16px;border-radius:8px;}
+ .k-box-u50z summary{font-family:var(--font-heading);font-size:1rem;color:#fff;cursor:pointer;}
+ .r-head-i5si{
+ background:#222;padding:24px;border-radius:24px;margin:80px 24px;max-width:800px;margin:auto;
+ }
+ .r-head-i5si h3{font-family:var(--font-heading);font-size:1.5rem;color:#fff;margin-bottom:12px;}
+ .k-list-ut7m{
+ background:#000;padding:40px 24px;text-align:center;color:#777;font-size:0.9rem;
+ }
+ .n-list-su0c{
+ display:inline-block;background:var(--color-accent);color:#fff;padding:12px 24px;border:none;cursor:pointer;
+ }
+ /* 시맨틱 마커 */
+ .k-wrap-v0ob{display:none;}
+ </style>
+ <script type="application/ld+json">
+ {
+ "@context":"https://schema.org",
+ "@type":"LocalBusiness",
+ "name":"망원 클럽 룩북",
+ "url":"https://mangwon-review-club.link-hub.org/",
+ "address":{"@type":"PostalAddress","addressLocality":"서울시 마포구 망원동"},
+ "author":{
+ "@type":"Person",
+ "name":"시은지",
+ "description":"망원 지역 정보를 5년간 정리해온 로컬 가이드"
+ },
+ "potentialAction":{
+ "@type":"SearchAction",
+ "target":"https://mangwon-review-club.link-hub.org/?s={search_term_string}",
+ "query-input":"required name=search_term_string"
+ }
+ }
+ </script>
+ <script type="application/ld+json">
+ {
+ "@context":"https://schema.org",
+ "@type":"FAQPage",
+ "mainEntity":[
+ {
+ "@type":"Question",
+ "name":"망원 클럽은 언제 가장 붐빕니까?",
+ "acceptedAnswer":{"@type":"Answer","text":"주말 저녁과 공휴일 밤에 가장 많은 인원이 모입니다. 특히 21시 이후가 최고 혼잡도입니다."}
+ },
+ {
+ "@type":"Question",
+ "name":"친구와 두 명 이상일 때 가장 적합한 클럽은?",
+ "acceptedAnswer":{"@type":"Answer","text":"대규모 라운지와 넓은 무대가 있는 ‘마그네틱 라운지’가 인원당 공간을 충분히 확보해 편합니다."}
+ },
+ {
+ "@type":"Question",
+ "name":"음악 장르에 따라 추천 클럽은?",
+ "acceptedAnswer":{"@type":"Answer","text":"EDM은 ‘라이트닝 베이스’, 힙합은 ‘베이스 라인’, 인디는 ‘어반 사운드’에서 각각 특화된 분위기를 즐길 수 있습니다."}
+ },
+ {
+ "@type":"Question",
+ "name":"클럽 진입 전 확인해야 할 필수 항목은?",
+ "acceptedAnswer":{"@type":"Answer","text":"입장 연령, 복장 규정, 사전 예매 여부, 그리고 코로나 방역 지침을 사전에 체크하세요."}
+ }
+ ]
+ }
+ </script>
 </head>
 <body>
-  <div class="v-body-lwl2" aria-hidden="true"></div>
+ <div class="v-body-lwl2" aria-hidden="true"></div>
 
-  <header class="t-main-fgl8" role="banner" aria-label="사이트 헤더">
-    <div class="v-card-8vog">망원클럽룩북</div>
-    <input type="checkbox" id="x-box-zp0b" aria-label="메뉴 토글">
-    <label for="x-box-zp0b" class="n-foot-9w51"><span></span><span></span><span></span></label>
-    <nav class="n-body-o434" role="navigation" aria-label="주 메뉴">
-      <a href="#selection">선택 기준</a>
-      <a href="#checklist">이용 전 확인사항</a>
-      <a href="#fit">조건별 적합성</a>
-      <a href="#faq">FAQ</a>
-    </nav>
-  </header>
+ <header class="t-main-fgl8" role="banner" aria-label="사이트 헤더">
+ <div class="v-card-8vog">망원클럽룩북</div>
+ <input type="checkbox" id="x-box-zp0b" aria-label="메뉴 토글">
+ <label for="x-box-zp0b" class="n-foot-9w51"><span></span><span></span><span></span></label>
+ <nav class="n-body-o434" role="navigation" aria-label="주 메뉴">
+ <a href="#selection">선택 기준</a>
+ <a href="#checklist">이용 전 확인사항</a>
+ <a href="#fit">조건별 적합성</a>
+ <a href="#faq">FAQ</a>
+ </nav>
+ </header>
 
-  <section class="x-list-uz8o" role="region" aria-label="히어로 섹션">
-    <h1>망원 클럽 룩북</h1>
-    <div class="m-grid-7yw5">Night Transit</div>
-  </section>
+ <section class="x-list-uz8o" role="region" aria-label="히어로 섹션">
+ <h1>망원 클럽 룩북</h1>
+ <div class="m-grid-7yw5">Night Transit</div>
+ </section>
 
-  <main>
-    <section id="selection" class="v-top-ibvy" role="region" aria-label="선택 기준">
-      <h2>선택 기준</h2>
-      <p>망원은 거리마다 분위기가 다릅니다. 도심 중심부는 소음과 인파가 집중되는 반면, 골목길에 위치한 클럽은 차분한 음악과 독립적인 분위기를 제공합니다.</p>
-      <p>방문 목적에 따라 선택 포인트가 달라집니다. 파티를 즐기고 싶다면 대형 무대와 조명이 풍부한 클럽을, 조용히 대화를 나누고 싶다면 라운지형 공간을 우선 고려하세요.</p>
-      <div class="x-card-aufs">
-        <div class="x-side-vh7c">
-          <h3>인원 규모</h3>
-          <p>대규모 인원을 수용할 수 있는 클럽은 사전 예약이 필수입니다. 작은 인원은 자유롭게 입장 가능하지만, 좌석이 제한될 수 있습니다.</p>
-        </div>
-        <div class="x-side-vh7c">
-          <h3>음악 장르</h3>
-          <p>EDM, 힙합, 인디 등 장르별 특화 클럽이 있습니다. 장르에 맞는 라인업을 사전에 확인해 두면 만족도가 높아집니다.</p>
-        </div>
-        <div class="x-side-vh7c">
-          <h3>위치 접근성</h3>
-          <p>지하철 6호선 망원역과 버스 정류장이 가깝습니다. 도보 거리 내에 여러 클럽이 모여 있어 이동이 편리합니다.</p>
-        </div>
-        <div class="x-side-vh7c">
-          <h3>가격대</h3>
-          <p>입장료는 10,000원에서 30,000원 사이이며, VIP 좌석은 별도 요금이 발생합니다. 사전 확인을 권고합니다.</p>
-        </div>
-      </div>
-      <span class="k-wrap-v0ob" aria-hidden="true" data-t="a1b2c3d4">●</span>
-    </section>
+ <main>
+ <section id="selection" class="v-top-ibvy" role="region" aria-label="선택 기준">
+ <h2>선택 기준</h2>
+ <p>망원은 거리마다 분위기가 다릅니다. 도심 중심부는 소음과 인파가 집중되는 반면, 골목길에 위치한 클럽은 차분한 음악과 독립적인 분위기를 제공합니다.</p>
+ <p>방문 목적에 따라 선택 포인트가 달라집니다. 파티를 즐기고 싶다면 대형 무대와 조명이 풍부한 클럽을, 조용히 대화를 나누고 싶다면 라운지형 공간을 우선 고려하세요.</p>
+ <div class="x-card-aufs">
+ <div class="x-side-vh7c">
+ <h3>인원 규모</h3>
+ <p>대규모 인원을 수용할 수 있는 클럽은 사전 예약이 필수입니다. 작은 인원은 자유롭게 입장 가능하지만, 좌석이 제한될 수 있습니다.</p>
+ </div>
+ <div class="x-side-vh7c">
+ <h3>음악 장르</h3>
+ <p>EDM, 힙합, 인디 등 장르별 특화 클럽이 있습니다. 장르에 맞는 라인업을 사전에 확인해 두면 만족도가 높아집니다.</p>
+ </div>
+ <div class="x-side-vh7c">
+ <h3>위치 접근성</h3>
+ <p>지하철 6호선 망원역과 버스 정류장이 가깝습니다. 도보 거리 내에 여러 클럽이 모여 있어 이동이 편리합니다.</p>
+ </div>
+ <div class="x-side-vh7c">
+ <h3>가격대</h3>
+ <p>입장료는 10,000원에서 30,000원 사이이며, VIP 좌석은 별도 요금이 발생합니다. 사전 확인을 권고합니다.</p>
+ </div>
+ </div>
+ <span class="k-wrap-v0ob" aria-hidden="true" data-t="a1b2c3d4">●</span>
+ </section>
 
-    <section id="checklist" class="v-top-ibvy" role="region" aria-label="이용 전 확인사항">
-      <h2>이용 전 확인사항</h2>
-      <p>클럽 입장 전 반드시 체크해야 할 항목이 있습니다. 연령 제한은 21세 이상이며, 신분증을 반드시 지참하세요.</p>
-      <p>복장은 너무 화려하거나 노출이 심한 스타일을 피하고, 편안하면서도 세련된 스타일을 추천합니다. 또한, 사전 예약이 필요한 경우는 홈페이지에서 예약을 마쳐야 입장이 가능합니다.</p>
-      <p>코로나 방역 지침은 실시간으로 변동될 수 있습니다. 마스크 착용 여부와 방역 체크를 사전에 확인해 주세요.</p>
-      <span class="k-wrap-v0ob" aria-hidden="true" data-t="e5f6g7h8">○</span>
-    </section>
+ <section id="checklist" class="v-top-ibvy" role="region" aria-label="이용 전 확인사항">
+ <h2>이용 전 확인사항</h2>
+ <p>클럽 입장 전 반드시 체크해야 할 항목이 있습니다. 연령 제한은 21세 이상이며, 신분증을 반드시 지참하세요.</p>
+ <p>복장은 너무 화려하거나 노출이 심한 스타일을 피하고, 편안하면서도 세련된 스타일을 추천합니다. 또한, 사전 예약이 필요한 경우는 홈페이지에서 예약을 마쳐야 입장이 가능합니다.</p>
+ <p>코로나 방역 지침은 실시간으로 변동될 수 있습니다. 마스크 착용 여부와 방역 체크를 사전에 확인해 주세요.</p>
+ <span class="k-wrap-v0ob" aria-hidden="true" data-t="e5f6g7h8">○</span>
+ </section>
 
-    <section id="fit" class="v-top-ibvy" role="region" aria-label="조건별 적합성">
-      <h2>조건별 적합성</h2>
-      <p>첫 방문자라면 ‘라이트닝 베이스’가 가장 무난합니다. 입구가 넓고, 초보자를 위한 안내 직원이 상주합니다.</p>
-      <p>친구와 3~4명이 함께라면 ‘베이스 라인’의 라운지 구역이 적합합니다. 소파 좌석과 조용한 배경음악이 있어 대화를 이어가기 좋습니다.</p>
-      <p>특정 목적(예: 댄스 파티, 라이브 공연)마다 클럽 선택이 달라집니다. 댄스 파티는 대형 무대와 강렬한 조명이 있는 ‘마그네틱 라운지’를, 라이브 공연은 음향 시설이 좋은 ‘어반 사운드’를 선택하세요.</p>
-      <p>시간대별 인원 흐름을 계산에 넣어 보세요. 저녁 20시 전후는 비교적 한산하고, 22시 이후는 인파가 몰리므로 상황에 맞게 방문 시간을 조정하면 보다 쾌적한 경험을 할 수 있습니다.</p>
-      <span class="k-wrap-v0ob" aria-hidden="true" data-t="i9j0k1l2">·</span>
-    </section>
+ <section id="fit" class="v-top-ibvy" role="region" aria-label="조건별 적합성">
+ <h2>조건별 적합성</h2>
+ <p>첫 방문자라면 ‘라이트닝 베이스’가 가장 무난합니다. 입구가 넓고, 초보자를 위한 안내 직원이 상주합니다.</p>
+ <p>친구와 3~4명이 함께라면 ‘베이스 라인’의 라운지 구역이 적합합니다. 소파 좌석과 조용한 배경음악이 있어 대화를 이어가기 좋습니다.</p>
+ <p>특정 목적(예: 댄스 파티, 라이브 공연)마다 클럽 선택이 달라집니다. 댄스 파티는 대형 무대와 강렬한 조명이 있는 ‘마그네틱 라운지’를, 라이브 공연은 음향 시설이 좋은 ‘어반 사운드’를 선택하세요.</p>
+ <p>시간대별 인원 흐름을 계산에 넣어 보세요. 저녁 20시 전후는 비교적 한산하고, 22시 이후는 인파가 몰리므로 상황에 맞게 방문 시간을 조정하면 보다 쾌적한 경험을 할 수 있습니다.</p>
+ <span class="k-wrap-v0ob" aria-hidden="true" data-t="i9j0k1l2">·</span>
+ </section>
 
-    <section class="r-head-i5si" role="region" aria-label="작성자 소개">
-      <h3>작성자 소개</h3>
-      <p>시은지 – 망원 지역 정보를 5년간 정리해온 로컬 가이드. 현지 클럽 문화와 트렌드를 깊이 이해하고 있습니다.</p>
-    </section>
+ <section class="r-head-i5si" role="region" aria-label="작성자 소개">
+ <h3>작성자 소개</h3>
+ <p>시은지 – 망원 지역 정보를 5년간 정리해온 로컬 가이드. 현지 클럽 문화와 트렌드를 깊이 이해하고 있습니다.</p>
+ </section>
 
-    <section id="faq" class="v-top-ibvy k-box-u50z" role="region" aria-label="FAQ">
-      <h2>자주 묻는 질문</h2>
-      <details>
-        <summary>망원 클럽은 언제 가장 붐빕니까?</summary>
-        <p>주말 저녁과 공휴일 밤에 가장 많은 인원이 모입니다. 특히 21시 이후가 최고 혼잡도입니다.</p>
-      </details>
-      <details>
-        <summary>친구와 두 명 이상일 때 가장 적합한 클럽은?</summary>
-        <p>대규모 라운지와 넓은 무대가 있는 ‘마그네틱 라운지’가 인원당 공간을 충분히 확보해 편합니다.</p>
-      </details>
-      <details>
-        <summary>음악 장르에 따라 추천 클럽은?</summary>
-        <p>EDM은 ‘라이트닝 베이스’, 힙합은 ‘베이스 라인’, 인디는 ‘어반 사운드’에서 각각 특화된 분위기를 즐길 수 있습니다.</p>
-      </details>
-      <details>
-        <summary>클럽 진입 전 확인해야 할 필수 항목은?</summary>
-        <p>입장 연령, 복장 규정, 사전 예매 여부, 그리고 코로나 방역 지침을 사전에 체크하세요.</p>
-      </details>
-    </section>
-  </main>
+ <section id="faq" class="v-top-ibvy k-box-u50z" role="region" aria-label="FAQ">
+ <h2>자주 묻는 질문</h2>
+ <details>
+ <summary>망원 클럽은 언제 가장 붐빕니까?</summary>
+ <p>주말 저녁과 공휴일 밤에 가장 많은 인원이 모입니다. 특히 21시 이후가 최고 혼잡도입니다.</p>
+ </details>
+ <details>
+ <summary>친구와 두 명 이상일 때 가장 적합한 클럽은?</summary>
+ <p>대규모 라운지와 넓은 무대가 있는 ‘마그네틱 라운지’가 인원당 공간을 충분히 확보해 편합니다.</p>
+ </details>
+ <details>
+ <summary>음악 장르에 따라 추천 클럽은?</summary>
+ <p>EDM은 ‘라이트닝 베이스’, 힙합은 ‘베이스 라인’, 인디는 ‘어반 사운드’에서 각각 특화된 분위기를 즐길 수 있습니다.</p>
+ </details>
+ <details>
+ <summary>클럽 진입 전 확인해야 할 필수 항목은?</summary>
+ <p>입장 연령, 복장 규정, 사전 예매 여부, 그리고 코로나 방역 지침을 사전에 체크하세요.</p>
+ </details>
+ </section>
+ </main>
 
-  <footer class="k-list-ut7m" role="contentinfo">
-    © 2026 망원 클럽 룩북. All rights reserved.
-  </footer>
+ <footer class="k-list-ut7m" role="contentinfo">
+ © 2026 망원 클럽 룩북. All rights reserved.
+ </footer>
 </body>
 </html>
